@@ -1,0 +1,19 @@
+1.
+BEGIN;
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+SHOW TRANSACTION ISOLATION LEVEL;
+
+2.
+BEGIN;
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+SHOW TRANSACTION ISOLATION LEVEL;
+
+1.
+SELECT * FROM pizzeria;
+2.
+SELECT * FROM pizzeria;
+1.
+UPDATE pizzeria SET rating = 4 WHERE name = 'Pizza Hut';
+2.
+UPDATE pizzeria SET rating = 3.6 WHERE name = 'Pizza Hut';
+// could not serialize access due to concurrent update
